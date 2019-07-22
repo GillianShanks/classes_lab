@@ -24,7 +24,11 @@ class TestLibrary < MiniTest::Test
   end
 
   def test_get_books()
-    assert_equal(2, @library.books.length)
+    assert_equal(2, @library.books.count)
+  end
+
+  def test_get_book_info()
+    assert_equal(2, @library.get_book_info("lord_of_the_rings").count)
   end
 
 end

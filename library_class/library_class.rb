@@ -7,4 +7,12 @@ class Library
     return @books
   end
 
+  #takes in string
+  #for hash in array, return hash if
+  def get_book_info(book_name)
+    for book in @books
+      return book if book[:title] == book_name
+    end
+  end
+
 end
