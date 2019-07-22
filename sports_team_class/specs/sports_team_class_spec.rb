@@ -43,4 +43,9 @@ class TestSportsTeam < Minitest::Test
     assert_equal(1, @team1.points)
   end
 
+  def test_update_points__lose()
+    @team1.update_points("lose")
+    assert_equal(0, @team1.points)
+  end
+
 end
