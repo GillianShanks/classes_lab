@@ -4,7 +4,7 @@ class SportsTeam
 
   def initialize(team_name, players, coach)
     @team_name = team_name
-    @players = players
+    @players = players #is an array
     @coach = coach
   end
 
@@ -27,4 +27,9 @@ class SportsTeam
   def add_player(new_player)
     @players << new_player
   end
+
+  def check_player(player_name)
+    return @players.include?(player_name)
+  end
+
 end
