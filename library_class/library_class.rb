@@ -19,4 +19,8 @@ class Library
     return get_book_info(book_name)[:rental_details]
   end
 
+  def add_new_book(new_title)
+    @books << {title: new_title, rental_details: {}}
+  end
+
 end

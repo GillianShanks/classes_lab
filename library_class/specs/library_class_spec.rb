@@ -36,4 +36,9 @@ class TestLibrary < MiniTest::Test
     assert_equal("Jeff", rental_info[:student_name])
   end
 
+  def test_add_new_book()
+    @library.add_new_book("sherlock_holmes")
+    assert_equal(3, @library.books.count)
+  end
+
 end
