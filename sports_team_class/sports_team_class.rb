@@ -6,7 +6,7 @@ class SportsTeam
     @team_name = team_name
     @players = players #is an array
     @coach = coach
-    @points = 0
+    @points = 0 #may go outside of initialize
   end
 
   # def team_name()
@@ -31,6 +31,14 @@ class SportsTeam
 
   def check_player(player_name)
     return @players.include?(player_name)
+  end
+
+  def update_points(outcome)
+    if outcome == "win"
+      @points += 1
+    end
+    #add else return for lose?
+
   end
 
 end

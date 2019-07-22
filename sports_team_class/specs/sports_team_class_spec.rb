@@ -4,7 +4,7 @@ require_relative("../sports_team_class.rb")
 
 class TestSportsTeam < Minitest::Test
   def setup()
-    players = ["Player1", "Player2", "Player3"] #local or global?
+    players = ["Player1", "Player2", "Player3"] #local or global? local works
     @team1 = SportsTeam.new("Dolphins", players, "Brian Flores" )
   end
 
@@ -36,6 +36,11 @@ class TestSportsTeam < Minitest::Test
 
   def test_check_player__not_present()
     assert_equal(false, @team1.check_player("Player5"))
+  end
+
+  def test_update_points__win()
+    @team1.update_points("win")
+    assert_equal(1, @team1.points)
   end
 
 end
