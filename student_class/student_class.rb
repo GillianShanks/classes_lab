@@ -21,4 +21,8 @@ class Student
     @cohort = new_cohort
   end
 
+  def speak()
+    return "I like coding!" if @name == "Gillian"
+  end
+
 end
