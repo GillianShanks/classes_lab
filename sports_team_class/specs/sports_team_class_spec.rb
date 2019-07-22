@@ -12,4 +12,7 @@ class TestSportsTeam < Minitest::Test
     assert_equal("Dolphins", @team1.team_name)
   end
 
+  def test_get_players()
+    assert_equal(3, @team1.players.length)
+  end
 end
