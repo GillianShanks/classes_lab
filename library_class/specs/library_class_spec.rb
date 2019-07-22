@@ -31,4 +31,9 @@ class TestLibrary < MiniTest::Test
     assert_equal(2, @library.get_book_info("lord_of_the_rings").count)
   end
 
+  def test_get_book_rental_info()
+    rental_info = @library.book_rental_info("lord_of_the_rings")
+    assert_equal("Jeff", rental_info[:student_name])
+  end
+
 end
