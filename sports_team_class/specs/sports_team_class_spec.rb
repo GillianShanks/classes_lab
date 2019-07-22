@@ -15,4 +15,8 @@ class TestSportsTeam < Minitest::Test
   def test_get_players()
     assert_equal(3, @team1.players.length)
   end
+
+  def test_get_coach()
+    assert_equal("Brian Flores", @team1.coach)
+  end
 end
