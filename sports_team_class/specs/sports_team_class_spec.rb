@@ -34,4 +34,8 @@ class TestSportsTeam < Minitest::Test
     assert_equal(true, @team1.check_player("Player2"))
   end
 
+  def test_check_player__not_present()
+    assert_equal(false, @team1.check_player("Player5"))
+  end
+
 end
